@@ -2,11 +2,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct {
+typedef enum {
+    cube, zed, slope, step, line
+} ShapeType;
 
-};
+void putShape(ShapeType shape, ShapeType **gameBoard, int x, int y);
 
 int main(int argc, char **argv) {
+    ShapeType gameBoard[8][8];
+    
     int winWidth, winHeight;
     winWidth = winHeight = 750;
 
